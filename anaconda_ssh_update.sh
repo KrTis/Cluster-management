@@ -17,6 +17,6 @@ done
 for ((i=1;i<$#;i++)); do
 	echo "conda env update"
 	echo "---------------------------------------"
-	ssh $1@${arguments[$i]}  "conda env update --prefix ./anaconda3 --file environment.yml --prune;"
+	ssh $1@${arguments[$i]}  "conda env update --prefix ./anaconda3 --file environment.yml --prune;" &
 done
-
+wait
