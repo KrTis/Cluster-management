@@ -1,8 +1,7 @@
+# simple script to distribute command over a cluster
+# usage . anaconda_ssh_update.sh username server1 server2 ...
+echo "Exporting active conda env to environment.yml"
 conda env export > environment.yml
-#for h in dodo3 dodo4 dodo5 dodo6 dodo7; do
-#        scp environment.yml kti
-
-# usage: username server1 server2...
 
 arguments=("$@") 
 echo -n "logging into username " $1 "on" ${#-1} " servers "
